@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vectis AI</title>
+    <!-- Tailwind CSS CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      /* Custom gradient for hero section and buttons */
+      .bg-gradient-purple-blue {
+        background-image: linear-gradient(135deg, #6c46ee 0%, #2980b9 100%);
+      }
+      .text-gradient-purple-blue {
+        background-image: linear-gradient(135deg, #6c46ee 0%, #2980b9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* A subtle animation for the hero section background */
+      .hero-bg-animate {
+        background-size: 400% 400%;
+        animation: gradient-shift 15s ease infinite;
+      }
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      /* Custom scrollbar styling for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-gray-200">
+    <!-- Header & Navigation -->
+    <header
+      class="py-6 px-4 md:px-8 lg:px-12 fixed w-full z-50 bg-gray-950/80 backdrop-blur-md"
+    >
+      <nav class="flex justify-between items-center">
+        <!-- Logo/Brand Name -->
+        <a href="#" class="text-3xl font-bold text-gray-50 flex items-center">
+          <span class="text-gradient-purple-blue">Vectis</span> AI
+        </a>
+        <!-- Desktop Navigation Links (Hidden on mobile) -->
+        <ul class="hidden md:flex space-x-8 text-lg font-medium">
+          <li>
+            <a href="#features" class="hover:text-purple-400 transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#pricing" class="hover:text-purple-400 transition-colors"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="#blog" class="hover:text-purple-400 transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-purple-400 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Call to Action Button -->
+        <a
+          href="#contact"
+          class="bg-gradient-purple-blue hover:opacity-90 text-white font-semibold py-2 px-6 rounded-full transition-opacity shadow-lg"
+        >
+          Get Started
+        </a>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 lg:px-12 pt-24">
+      <!-- Hero Section -->
+      <section
+        class="text-center py-20 md:py-32 relative overflow-hidden rounded-3xl mt-8 shadow-2xl bg-gray-900 hero-bg-animate"
+      >
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4"
+        >
+          Your Data, <br class="md:hidden" />Your Story,
+          <br class="hidden md:block" />
+          <span class="text-gradient-purple-blue">No Code.</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">
+          Vectis AI is on a mission to make data science and AI accessible to
+          everyone. Transform complex tasks into simple, no-code workflows and
+          unlock your data's true potential.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="#contact"
+            class="bg-gradient-purple-blue hover:opacity-90 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl"
+          >
+            Request a Demo
+          </a>
+          <a
+            href="#features"
+            class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full transition-colors transform hover:scale-105"
+          >
+            Explore Features
+          </a>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 text-white">
+          Unlock Your Data's Potential
+        </h2>
+        <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+          Vectis AI provides powerful tools to streamline your data science
+          journey, from automation to intelligent interaction.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature Card 1 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-700 hover:border-purple-500 transition-colors group"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-purple-blue rounded-full flex items-center justify-center text-white mb-6 transform group-hover:-translate-y-2 transition-transform shadow-lg"
+            >
+              <!-- Icon for Workflow Automation -->
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 01-8 8v-8H2z"></path>
+                <path d="M12 2.251A8.028 8.028 0 0118.749 9H12V2.251z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              No-Code Workflow Automation
+            </h3>
+            <p class="text-gray-400">
+              Build and automate complex data science pipelines with an
+              intuitive drag-and-drop interface. Forget about writing code—just
+              connect the dots and watch the magic happen.
+            </p>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-700 hover:border-purple-500 transition-colors group"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-purple-blue rounded-full flex items-center justify-center text-white mb-6 transform group-hover:-translate-y-2 transition-transform shadow-lg"
+            >
+              <!-- Icon for Data Chatbot -->
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              AI Chatbot for Data
+            </h3>
+            <p class="text-gray-400">
+              Interact with your datasets using natural language. Ask questions,
+              get instant insights, and generate reports without ever touching a
+              query.
+            </p>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-700 hover:border-purple-500 transition-colors group"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-purple-blue rounded-full flex items-center justify-center text-white mb-6 transform group-hover:-translate-y-2 transition-transform shadow-lg"
+            >
+              <!-- Icon for AI/ML Creation -->
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h3.586l.707-.707A6.001 6.001 0 0010 2zm0 2a4 4 0 014 4v2a2 2 0 11-4 0v-2a4 4 0 014-4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              Create AI/ML Solutions
+            </h3>
+            <p class="text-gray-400">
+              Easily build and deploy custom machine learning models and AI
+              solutions. Our platform handles the complexity, so you can focus
+              on creativity and results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="py-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 text-white">
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+          Choose the plan that's right for you. Get started for free and scale
+          as your needs grow.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Pricing Card 1: Starter -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-xl border-2 border-gray-700 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-2xl font-bold mb-2 text-white">Starter</h3>
+              <p class="text-gray-400 mb-4">
+                Perfect for individuals and small projects.
+              </p>
+              <p class="text-4xl font-extrabold text-purple-400 mb-6">
+                $0<span class="text-xl font-normal text-gray-400">/mo</span>
+              </p>
+              <ul class="space-y-3 text-gray-300 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Basic Workflow Automation
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  100 Chatbot Queries/mo
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-red-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L9.586 10l-2.293 2.293a1 1 0 001.414 1.414L11 11.414l2.293 2.293a1 1 0 001.414-1.414L12.414 10l2.293-2.293a1 1 0 00-1.414-1.414L11 8.586l-2.293-2.293z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  No Custom AI/ML Solutions
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              aria-disabled="true"
+              class="block text-center bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors"
+            >
+              Sign Up for Free
+            </a>
+          </div>
+
+          <!-- Pricing Card 2: Pro (Featured) -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-2xl border-2 border-purple-500 flex flex-col justify-between relative transform scale-105"
+          >
+            <div
+              class="absolute -top-3 right-6 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase"
+            >
+              Most Popular
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2 text-white">Pro</h3>
+              <p class="text-gray-400 mb-4">
+                Unlock advanced features for growing teams.
+              </p>
+              <p class="text-4xl font-extrabold text-purple-400 mb-6">
+                $49<span class="text-xl font-normal text-gray-400">/mo</span>
+              </p>
+              <ul class="space-y-3 text-gray-300 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Unlimited Workflow Automation
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  5000 Chatbot Queries/mo
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Create & Deploy Custom AI/ML Solutions
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Priority Support
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              class="block text-center bg-gradient-purple-blue hover:opacity-90 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg"
+            >
+              Start 14-Day Free Trial
+            </a>
+          </div>
+
+          <!-- Pricing Card 3: Enterprise -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-xl border-2 border-gray-700 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-2xl font-bold mb-2 text-white">Enterprise</h3>
+              <p class="text-gray-400 mb-4">
+                For large-scale data teams and organizations.
+              </p>
+              <p class="text-4xl font-extrabold text-purple-400 mb-6">Custom</p>
+              <ul class="space-y-3 text-gray-300 mb-8">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  All Pro Features
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Scalable Resources
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Dedicated Account Manager
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Custom Integrations
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              class="block text-center bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors"
+            >
+              Contact Sales
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="py-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 text-white">
+          From Our Blog
+        </h2>
+        <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+          Stay up-to-date with the latest trends in no-code AI, data science,
+          and workflow automation.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border-2 border-gray-700"
+          >
+            <img
+              src="https://placehold.co/600x400/1f2937/9ca3af?text=AI+in+Action"
+              alt="AI in Action"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white mb-2">
+                The Rise of No-Code AI Platforms
+              </h3>
+              <p class="text-sm text-gray-400 mb-4">
+                August 26, 2025 • 5 min read
+              </p>
+              <p class="text-gray-300 mb-4">
+                Discover how no-code solutions are democratizing access to data
+                science and empowering business users to create powerful AI
+                models.
+              </p>
+              <a
+                href="https://cenzio-rey.medium.com/ai-in-action-e100f626398d?sk=21095f4aa354bfb97eef13b811189c4b"
+                class="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                target="_blank"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border-2 border-gray-700"
+          >
+            <img
+              src="https://placehold.co/600x400/1f2937/9ca3af?text=Data+Workflow"
+              alt="Data Workflow"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white mb-2">
+                Automating Your Data Analysis Workflow
+              </h3>
+              <p class="text-sm text-gray-400 mb-4">
+                August 26, 2025 • 7 min read
+              </p>
+              <p class="text-gray-300 mb-4">
+                Learn how to build efficient, automated data pipelines that save
+                you time and reduce manual errors, all without writing a single
+                line of code.
+              </p>
+              <a
+                href="https://cenzio-rey.medium.com/automating-your-data-analysis-workflow-less-manual-work-more-insight-2fab8d35be53?sk=825ae1168965923ae5ae75d291c05548"
+                class="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                target="_blank"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border-2 border-gray-700"
+          >
+            <img
+              src="https://placehold.co/600x400/1f2937/9ca3af?text=Chatbot+Queries"
+              alt="Chatbot Queries"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white mb-2">
+                Query Your Data with a Chatbot
+              </h3>
+              <p class="text-sm text-gray-400 mb-4">
+                October 12, 2024 • 6 min read
+              </p>
+              <p class="text-gray-300 mb-4">
+                Explore the power of natural language processing and how it can
+                change the way you interact with your business intelligence
+                dashboards.
+              </p>
+              <a
+                href="https://cenzio-rey.medium.com/query-your-data-with-a-chatbot-your-new-business-intelligence-partner-3df5c54dcf4d?sk=62dd0ecda4afcebed52217de8ecaeea1"
+                class="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                target="_blank"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 text-white">
+          Get in Touch
+        </h2>
+        <p class="text-center text-lg max-w-3xl mx-auto mb-16 text-gray-400">
+          Have questions or want to learn more about how Vectis AI can help your
+          business? Fill out the form below.
+        </p>
+        <div
+          class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-700"
+        >
+          <form>
+            <div class="mb-6">
+              <label
+                for="name"
+                class="block text-gray-300 text-sm font-bold mb-2"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full p-3 rounded-lg bg-gray-900 border-2 border-gray-700 text-white focus:outline-none focus:border-purple-500"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block text-gray-300 text-sm font-bold mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full p-3 rounded-lg bg-gray-900 border-2 border-gray-700 text-white focus:outline-none focus:border-purple-500"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-gray-300 text-sm font-bold mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full p-3 rounded-lg bg-gray-900 border-2 border-gray-700 text-white focus:outline-none focus:border-purple-500"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-gradient-purple-blue hover:opacity-90 text-white font-bold py-3 px-8 rounded-full transition-opacity shadow-lg"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Final Call to Action -->
+      <section class="text-center py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Ready to Transform Your Data Workflow?
+        </h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+          Join the revolution and start building intelligent, no-code solutions
+          today.
+        </p>
+        <a
+          href="#contact"
+          class="bg-gradient-purple-blue hover:opacity-90 text-white font-bold py-3 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl text-lg"
+        >
+          Get Started with Vectis AI
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-500">
+      <div class="container mx-auto">
+        <p>&copy; 2024 Vectis AI. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
